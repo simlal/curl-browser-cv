@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Simon Lalonde - CV</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+        <style>
+            :root {
+                --bg-color-light: #f4f4f9;
+                --text-color-light: #333;
+                --header-bg-light: #007acc;
+                --header-text-light: #fff;
+
+                --bg-color-dark: #121212;
+                --text-color-dark: #e0e0e0;
+                --header-bg-dark: #1f1f1f;
+                --header-text-dark: #007acc;
+                --header-text-dark-alt: #fff;
+            }
+
+            [data-theme="light"] {
+                --bg-color: var(--bg-color-light);
+                --text-color: var(--text-color-light);
+                --header-bg: var(--header-bg-light);
+                --header-text: var(--header-text-light);
+                --header-text-alt: var(--header-bg-light);
+            }
+
+            [data-theme="dark"] {
+                --bg-color: var(--bg-color-dark);
+                --text-color: var(--text-color-dark);
+                --header-bg: var(--header-bg-dark);
+                --header-text: var(--header-text-dark);
+                --header-text-alt: var(--header-text-dark-alt);
+            }
+
+            body {
+                font-family: Arial, sans-serif;
+                line-height: 1.6;
+                margin: 0;
+                padding: 0;
+                background-color: var(--bg-color);
+                color: var(--text-color);
+                transition: background-color 0.3s, color 0.3s;
+            }
+
+            header {
+                text-align: center;
+                background-color: var(--header-bg);
+                color: var(--header-text);
+                padding: 1rem 0;
+            }
+
+            header h1 {
+                margin: 0;
+                font-size: 2rem;
+            }
+
+            header p {
+                margin: 0.3rem 0;
+                font-size: 1.2rem;
+            }
+
+            header a {
+                color: var(--header-text);
+                text-decoration: none;
+            }
+
+            header a:hover {
+                text-decoration: underline;
+            }
+
+            .container {
+                max-width: 900px;
+                margin: 2rem auto;
+                padding: 1.5rem;
+                background: var(--bg-color);
+                border-radius: 8px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            }
+
+            h2 {
+                border-bottom: 2px solid var(--header-bg);
+                padding-bottom: 0.3rem;
+                margin-bottom: 1rem;
+                color: var(--header-text-alt);
+            }
+
+            ul {
+                list-style-type: none;
+                padding: 0;
+            }
+
+            ul li {
+                margin-bottom: 0.5rem;
+            }
+
+            ul ul {
+                padding-left: 1.5rem;
+                margin-top: 0.5rem;
+            }
+
+            .table {
+                width: 100%;
+                border-collapse: collapse;
+                margin: 1rem 0;
+            }
+
+            .table th,
+            .table td {
+                border: 1px solid #ddd;
+                padding: 8px;
+            }
+
+            .table th {
+                background-color: var(--bg-color);
+                text-align: left;
+            }
+
+            .icon {
+                margin-right: 0.5rem;
+            }
+
+            .theme-toggle {
+                position: fixed;
+                top: 1rem;
+                right: 1rem;
+                background: var(--header-bg);
+                color: var(--header-text);
+                border: none;
+                padding: 0.5rem 1rem;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+
+            .theme-toggle:hover {
+                background: var(--header-text);
+                color: var(--header-bg);
+            }
+        </style>
+    </head>
+    <body data-theme="light">
+        <header>
+            <h1>Simon Lalonde</h1>
+            <p>
+                <i class="fa-brands fa-github">&nbsp;</i
+                ><a href="https://github.com/simlal" target="_blank">github.com/simlal</a> |
+                <i class="fab fa-linkedin icon"></i
+                ><a href="https://www.linkedin.com/in/simon-lalonde/" target="_blank">linkedin.com/in/simon-lalonde</a>
+            </p>
+            <p>
+                <i class="fas fa-envelope icon"></i>Email:
+                <a href="mailto:simlalonde@hotmail.com">simlalonde@hotmail.com</a> |
+                <i class="fas fa-map-marker-alt icon"></i>Location: Sherbrooke, QC
+            </p>
+        </header>
+        <button class="theme-toggle" onclick="toggleTheme()">Dark mode <i class="fas fa-moon"></i></button>
+        <div class="container">
+            <section>
+                <h2>Technical Skills <i class="fas fa-laptop-code icon"></i></h2>
+                <ul>
+                    <li><i class="fas fa-cloud icon"></i>Cloud & DevOps: Bash/Linux, Docker, AWS, GitHub Actions</li>
+                    <li><i class="fas fa-brain icon"></i>Data Science & AI: Scikit-learn, Matplotlib, Plotly</li>
+                    <li><i class="fas fa-microchip icon"></i>IoT & Embedded: ESP32, Raspberry Pi Pico, C/C++</li>
+                    <li>
+                        <i class="fas fa-server icon"></i>Backend Development: SQLAlchemy, Express, MySQL/PostgreSQL
+                    </li>
+                </ul>
+            </section>
+            <section>
+                <h2>Education <i class="fas fa-graduation-cap icon"></i></h2>
+                <ul>
+                    <li>
+                        <strong>Master’s in Computer Science</strong>, Université de Sherbrooke (2022 - Summer 2025)
+                        <ul>
+                            <li>Research in bioinformatics (Tahiri Lab, 2022)</li>
+                            <li>Propédeutique and coursework track (2023-present)</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Master’s in Biology</strong>, Université du Québec à Montréal (2014 - 2016)
+                        <ul>
+                            <li>Thesis: Contributions of SCD1 and PLD2 in breast cancer metastasis</li>
+                        </ul>
+                    </li>
+                    <li><strong>Bachelor’s in Biochemistry</strong>, Université du Québec à Montréal (2010 - 2013)</li>
+                </ul>
+            </section>
+            <section>
+                <h2>Professional Experience <i class="fas fa-briefcase icon"></i></h2>
+                <ul>
+                    <li>
+                        <strong>Software Developer</strong> - Pharmacie Martin Gilbert (2024 - Present)
+                        <ul>
+                            <li>Developed and deployed microservices with AWS Lambda</li>
+                            <li>Contributed to Express API development and testing</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Mitacs SSE Intern</strong> - Microbrasserie Siboire (2023 - Present)
+                        <ul>
+                            <li>Implemented Industry 4.0 tools to optimize production processes</li>
+                        </ul>
+                    </li>
+                    <li><strong>Brewer</strong> - Les 3 brasseurs St-Denis (2021 - 2022)</li>
+                    <li>
+                        <strong>Technicien de laboratoire</strong> - Microbrasseries Glutenberg et Oshlag (2020 - 2021)
+                    </li>
+                    <li>
+                        <strong>Research Assistant</strong> - Montreal Heart Institute (2016 - 2020)
+                        <ul>
+                            <li>Conducted functional genetics research on cardiovascular disease traits.</li>
+                            <li>Developed tools for NGS data visualization using Bash scripts.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </section>
+            <section>
+                <h2>Publications <i class="fas fa-book-open icon"></i></h2>
+                <ul>
+                    <li>
+                        Fournier C, Lalonde S et al.
+                        <strong
+                            >"Py-madaclim: An open-source Python API for geoclimatic data analysis of
+                            Madagascar."</strong
+                        >
+                        JOSS. (Writing in Progress).
+                    </li>
+                    <li>
+                        Wünnemann F, Lalonde S et al.
+                        <strong
+                            >"Multimodal CRISPR perturbations of GWAS loci associated with coronary artery
+                            disease."</strong
+                        >
+                        PLoS Genet. 2023.
+                    </li>
+                    <li>
+                        Lingrand M, Lalonde S et al.
+                        <strong
+                            >"SCD1 activity promotes cell migration via a PLD-mTOR pathway in triple-negative breast
+                            cancer."</strong
+                        >
+                        Breast Cancer. 2020.
+                    </li>
+                    <li>
+                        Lalonde S et al.
+                        <strong
+                            >"Integrative analysis of vascular endothelial cell genomic features identifies AIDA as a
+                            coronary artery disease candidate gene."</strong
+                        >
+                        Genome Biol. 2019.
+                    </li>
+                    <li>
+                        Codina-Fauteux VA, Beaudoin M, Lalonde S.
+                        <strong>"PHACTR1 splicing isoforms and eQTLs in atherosclerosis-relevant human cells."</strong>
+                        BMC Med Genet. 2018.
+                    </li>
+                    <li>
+                        Lalonde S et al.
+                        <strong
+                            >"Frameshift indels introduced by genome editing can lead to in-frame exon
+                            skipping."</strong
+                        >
+                        PLoS ONE. 2017.
+                    </li>
+                    <li>
+                        Lounis MA, Lalonde S et al.
+                        <strong
+                            >"Hepatic BSCL2 (Seipin) deficiency disrupts lipid droplet homeostasis and increases lipid
+                            metabolism via SCD1 activity."</strong
+                        >
+                        Journal of cellular Physiology. Lipids. 2017.
+                    </li>
+                    <li>
+                        Labrie M, Lalonde S et al.
+                        <strong
+                            >"Apolipoprotein D Transgenic Mice Develop Hepatic Steatosis through Activation of PPARγ and
+                            Fatty Acid Uptake."</strong
+                        >
+                        PLoS ONE. 2015.
+                    </li>
+                </ul>
+            </section>
+            <section>
+                <h2>Languages <i class="fas fa-language icon"></i></h2>
+                <ul>
+                    <li>French: Native</li>
+                    <li>English: Excellent written and spoken proficiency</li>
+                </ul>
+            </section>
+            <section>
+                <h2>Certifications <i class="fas fa-certificate icon"></i></h2>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Certification/Course</th>
+                            <th>Institution</th>
+                            <th>Date Obtained</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>CS50X</td>
+                            <td>HarvardX</td>
+                            <td>01/2023</td>
+                        </tr>
+                        <tr>
+                            <td>Python for Everybody Specialization</td>
+                            <td>University of Michigan</td>
+                            <td>06/2022</td>
+                        </tr>
+                        <tr>
+                            <td>Genomic Data Science with Galaxy</td>
+                            <td>John Hopkins University</td>
+                            <td>01/2018</td>
+                        </tr>
+                        <tr>
+                            <td>Introduction to Genomic Technologies</td>
+                            <td>John Hopkins University</td>
+                            <td>11/2017</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </div>
+        <script>
+            function toggleTheme() {
+                const body = document.body;
+                const currentTheme = body.getAttribute("data-theme");
+                const newTheme = currentTheme === "dark" ? "light" : "dark";
+                body.setAttribute("data-theme", newTheme);
+                document.querySelector(".theme-toggle").innerHTML =
+                    newTheme === "dark"
+                        ? 'Light mode <i class="fas fa-sun"></i>'
+                        : 'Dark mode <i class="fas fa-moon"></i>';
+            }
+        </script>
+    </body>
+</html>
