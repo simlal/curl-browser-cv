@@ -1,7 +1,7 @@
 import { NextApiRequest, NextApiResponse } from "next";
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-    const cv = `
+  const cv = `
 \x1b[1;34m=================================================\x1b[0m
                      \x1b[1;33mSimon Lalonde\x1b[0m
 \x1b[1;34m=================================================\x1b[0m
@@ -11,10 +11,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 \x1b[1;34m-------------------------------------------------\x1b[0m
                    \x1b[1;33mTechnical Skills\x1b[0m
 \x1b[1;34m-------------------------------------------------\x1b[0m
-- \x1b[1;32mCloud & DevOps:\x1b[0m Linux, Docker, AWS, GitHub Actions
-- \x1b[1;32mData Science & AI:\x1b[0m Scikit-learn, Matplotlib, Plotly
+- \x1b[1;32mCloud:\x1b[0m Linux, Docker, AWS Lambda, GitHub Actions
+- \x1b[1;32mAI:\x1b[0m Scikit-learn, Matplotlib, Plotly
 - \x1b[1;32mIoT & Embedded:\x1b[0m ESP32, RPI-Pico, C/C++
-- \x1b[1;32mBackend Development:\x1b[0m  SQLAlchemy, Express, MySQL/PostgreSQL
+- \x1b[1;32mBackend:\x1b[0m  SQLAlchemy, Express
 
 \x1b[1;34m-------------------------------------------------\x1b[0m
                       \x1b[1;33mEducation\x1b[0m
@@ -46,7 +46,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 |-------------------------|--------------------------|-------------------|
 | \x1b[1;33mTeaching Assistant      | Université de Sherbrooke | 2023           \x1b[0m   |
 |-------------------------|--------------------------|-------------------|
-| - Taught scientific programming with Python (IFT-211)                  |
+| - TA for intro to programming with Python (IFT-211)                    |
 |                                                                        |
 |-------------------------|--------------------------|-------------------|
 | \x1b[1;33mQuality Manager         | Microbrasserie Siboire   | 2022 - 2023    \x1b[0m   |
@@ -75,5 +75,5 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 \x1b[1;34m=================================================\x1b[0m
 \n`;
 
-    res.send(cv);
+  res.send(cv);
 }

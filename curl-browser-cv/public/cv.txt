@@ -7,10 +7,10 @@ Email: simlalonde@hotmail.com | Location: Sherbrooke, QC
 -------------------------------------------------
                    Technical Skills
 -------------------------------------------------
-- Cloud & DevOps: Linux, Docker, AWS, GitHub Actions
-- Data Science & AI: Scikit-learn, Matplotlib, Plotly
+- Cloud: Linux, Docker, AWS Lambda, GitHub Actions
+- AI: Scikit-learn, Matplotlib, Plotly
 - IoT & Embedded: ESP32, RPI-Pico, C/C++
-- Backend Development: SQLAlchemy, Express, MySQL/PostgreSQL
+- Backend: SQLAlchemy, Express
 
 -------------------------------------------------
                       Education
@@ -42,7 +42,7 @@ Email: simlalonde@hotmail.com | Location: Sherbrooke, QC
 |-------------------------|--------------------------|-------------------|
 | Teaching Assistant      | Université de Sherbrooke | 2023              |
 |-------------------------|--------------------------|-------------------|
-| - Taught scientific programming with Python (IFT-211)                  |
+| - TA for intro to programming with Python (IFT-211)                    |
 |                                                                        |
 |-------------------------|--------------------------|-------------------|
 | Quality Manager         | Microbrasserie Siboire   | 2022 - 2023       |

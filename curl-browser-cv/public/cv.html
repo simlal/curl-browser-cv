@@ -4,7 +4,7 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Simon Lalonde - CV</title>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
         <style>
             :root {
                 --bg-color-light: #f4f4f9;
@@ -16,7 +16,7 @@
                 --text-color-dark: #e0e0e0;
                 --header-bg-dark: #1f1f1f;
                 --header-text-dark: #007acc;
-                --header-text-dark-alt: #fff;
+                --header-text-dark-alt: #007acc;
             }
 
             [data-theme="light"] {
@@ -138,6 +138,23 @@
                 background: var(--header-text);
                 color: var(--header-bg);
             }
+
+            .go-back {
+                position: fixed;
+                top: 1rem;
+                left: 1rem;
+                background: var(--header-bg);
+                color: var(--header-text);
+                border: none;
+                padding: 0.5rem 1rem;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+
+            .go-back:hover {
+                background: var(--header-text);
+                color: var(--header-bg);
+            }
         </style>
     </head>
     <body data-theme="light">
@@ -155,16 +172,17 @@
                 <i class="fas fa-map-marker-alt icon"></i>Location: Sherbrooke, QC
             </p>
         </header>
+        <button class="go-back" onclick="goBack()">Back <i class="fa-solid fa-circle-chevron-left"></i></button>
         <button class="theme-toggle" onclick="toggleTheme()">Dark mode <i class="fas fa-moon"></i></button>
         <div class="container">
             <section>
                 <h2>Technical Skills <i class="fas fa-laptop-code icon"></i></h2>
                 <ul>
-                    <li><i class="fas fa-cloud icon"></i>Cloud & DevOps: Bash/Linux, Docker, AWS, GitHub Actions</li>
-                    <li><i class="fas fa-brain icon"></i>Data Science & AI: Scikit-learn, Matplotlib, Plotly</li>
-                    <li><i class="fas fa-microchip icon"></i>IoT & Embedded: ESP32, Raspberry Pi Pico, C/C++</li>
+                    <li><i class="fas fa-cloud icon"></i><strong>Cloud:</strong> Linux, Docker, AWS Lambda, GitHub Actions</li>
+                    <li><i class="fas fa-brain icon"></i><strong>AI:</strong> Scikit-learn, Matplotlib, Plotly</li>
+                    <li><i class="fas fa-microchip icon"></i><strong>IoT & Embedded:</strong> ESP32, RPI-Pico, C/C++</li>
                     <li>
-                        <i class="fas fa-server icon"></i>Backend Development: SQLAlchemy, Express, MySQL/PostgreSQL
+                        <i class="fas fa-server icon"></i><strong>Backend:</strong> SQLAlchemy, Express
                     </li>
                 </ul>
             </section>
@@ -175,7 +193,6 @@
                         <strong>Master’s in Computer Science</strong>, Université de Sherbrooke (2022 - Summer 2025)
                         <ul>
                             <li>Research in bioinformatics (Tahiri Lab, 2022)</li>
-                            <li>Propédeutique and coursework track (2023-present)</li>
                         </ul>
                     </li>
                     <li>
@@ -203,6 +220,10 @@
                             <li>Implemented Industry 4.0 tools to optimize production processes</li>
                         </ul>
                     </li>
+                    <li><strong>Teaching Assistant</strong> - Université de Sherbrooke (2023)</li>
+                        <ul>
+                            <li>TA for intro to programming with Python (IFT-211)</li>
+                        </ul>
                     <li><strong>Brewer</strong> - Les 3 brasseurs St-Denis (2021 - 2022)</li>
                     <li>
                         <strong>Technicien de laboratoire</strong> - Microbrasseries Glutenberg et Oshlag (2020 - 2021)
@@ -211,7 +232,6 @@
                         <strong>Research Assistant</strong> - Montreal Heart Institute (2016 - 2020)
                         <ul>
                             <li>Conducted functional genetics research on cardiovascular disease traits.</li>
-                            <li>Developed tools for NGS data visualization using Bash scripts.</li>
                         </ul>
                     </li>
                 </ul>
@@ -334,6 +354,9 @@
                     newTheme === "dark"
                         ? 'Light mode <i class="fas fa-sun"></i>'
                         : 'Dark mode <i class="fas fa-moon"></i>';
+            }
+            function goBack() {
+                window.history.back();
             }
         </script>
     </body>
