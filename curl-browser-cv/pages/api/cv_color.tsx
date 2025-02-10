@@ -13,7 +13,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 \x1b[1;34m-------------------------------------------------\x1b[0m
 - \x1b[1;32mCloud:\x1b[0m Linux, Docker, AWS Lambda, GitHub Actions
 - \x1b[1;32mAI:\x1b[0m Scikit-learn, Matplotlib, Plotly
-- \x1b[1;32mIoT & Embedded:\x1b[0m ESP32, RPI-Pico, C/C++
+- \x1b[1;32mIoT & Embedded:\x1b[0m RPI-Pico, ESP32, C++, Rust
 - \x1b[1;32mBackend:\x1b[0m  SQLAlchemy, Express
 
 \x1b[1;34m-------------------------------------------------\x1b[0m
