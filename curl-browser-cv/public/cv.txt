@@ -7,10 +7,10 @@ Email: simlalonde@hotmail.com | Location: Sherbrooke, QC
 -------------------------------------------------
                    Technical Skills
 -------------------------------------------------
-- Cloud: Linux, Docker, AWS Lambda, GitHub Actions
-- AI: Scikit-learn, Matplotlib, Plotly
-- IoT & Embedded: RPI-Pico, ESP32, C++, Rust
-- Backend: SQLAlchemy, Express
+- Cloud: Linux, Docker, AWS, GitHub Actions
+- AI & Data: Scikit-learn, Matplotlib
+- IoT & Systems: RPI-Pico, C++, Rust
+- Backend: SQLAlchemy, Node/Express
 
 -------------------------------------------------
                       Education
