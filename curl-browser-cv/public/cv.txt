@@ -8,9 +8,9 @@ Email: simlalonde@hotmail.com | Location: Sherbrooke, QC
                    Technical Skills
 -------------------------------------------------
 - Cloud: Linux, Docker, AWS, GitHub Actions
-- AI & Data: Scikit-learn, Matplotlib
-- IoT & Systems: RPI-Pico, C++, Rust
-- Backend: SQLAlchemy, Node/Express
+- IoT & Systems: Rust, C++, MCU basics (Pico, ESP32)
+- AI & Data: Python (Scikit-learn, Matplotlib)
+- Backend: SQLAlchemy, NodeJS (Express)
 
 -------------------------------------------------
                       Education
@@ -31,7 +31,9 @@ Email: simlalonde@hotmail.com | Location: Sherbrooke, QC
 |-------------------------|--------------------------|-------------------|
 | Software Developer      | Pharmacie Martin Gilbert | 2024 - Present    |
 |-------------------------|--------------------------|-------------------|
-| - Developed and deployed microservices with AWS Lambda                 |
+| - Developped and deployed microservices with AWS Lambda                |
+| - Created CI/CD pipelines (GitHub Actions) and manage infrastructure   |
+|   for serverless components (CloudFormation)                           |
 | - Contributed to Express API development and testing                   |
 |                                                                        |
 |-------------------------|--------------------------|-------------------|
