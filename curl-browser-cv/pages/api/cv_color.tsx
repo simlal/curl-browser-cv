@@ -12,7 +12,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
                    \x1b[1;33mTechnical Skills\x1b[0m
 \x1b[1;34m-------------------------------------------------\x1b[0m
 - \x1b[1;32mCloud:\x1b[0m Linux, Docker, AWS, GitHub Actions
-- \x1b[1;32mIoT & Systems:\x1b[0m Rust, C++, MCU basics (Pico, ESP32)
+- \x1b[1;32mSystems:\x1b[0m Rust, C++, MCU basics (Pico, ESP32)
 - \x1b[1;32mAI & Data:\x1b[0m Python (Scikit-learn, Matplotlib) 
 - \x1b[1;32mBackend:\x1b[0m SQLAlchemy, NodeJS (Express)
 
@@ -36,8 +36,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 | \x1b[1;33mSoftware Developer      | Pharmacie Martin Gilbert | 2024 - Present    \x1b[0m|
 |-------------------------|--------------------------|-------------------|
 | - Developped and deployed microservices with AWS Lambda                |
-| - Created CI/CD pipelines (GitHub Actions) and manage infrastructure   |
-|   for serverless components (CloudFormation)                           |
+| - Created CI/CD pipelines and manage infrastructure                    |
+|   for serverless components                                            |
 | - Contributed to Express API development and testing                   |
 |                                                                        |
 |-------------------------|--------------------------|-------------------|
