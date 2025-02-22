@@ -6,25 +6,30 @@
         <title>Simon Lalonde - CV</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
         <style>
-            :root {
-                --bg-color-light: #f4f4f9;
-                --text-color-light: #333;
-                --header-bg-light: #007acc;
-                --header-text-light: #fff;
+        :root {
+            /* Light Mode (Catppuccin Latte) */
+            --bg-color-light: #eff1f5; /* Subtler Latte background for better readability */
+            --text-color-light: #4c4f69; /* Slightly darker for contrast */
+            --header-bg-light: #dc8a78; /* Catppuccin Peach, warm and inviting */
+            --header-text-light: #ffffff; /* White for clear contrast */
+            --accent-color-light: #7287fd; /* Lavender for a softer blue */
+            --second-accent-color-light: #e64553; /* Adjusted to Catppuccin Maroon for stronger contrast */
 
-                --bg-color-dark: #121212;
-                --text-color-dark: #e0e0e0;
-                --header-bg-dark: #1f1f1f;
-                --header-text-dark: #007acc;
-                --header-text-dark-alt: #007acc;
-            }
+            /* Dark Mode (Catppuccin Mocha) */
+            --bg-color-dark: #181825; /* Darker Mocha background for a rich look */
+            --text-color-dark: #cdd6f4; /* Soft, readable white-blue */
+            --header-bg-dark: #f5c2e7; /* Pinkish for a calm yet distinct header */
+            --header-text-dark: #1e1e2e; /* Darker text for contrast in headers */
+            --accent-color-dark: #89b4fa; /* Same Blue as before, well-balanced */
+            --second-accent-color-dark: #f2cdcd; /* Softer Red for a cohesive feel */
 
             [data-theme="light"] {
                 --bg-color: var(--bg-color-light);
                 --text-color: var(--text-color-light);
                 --header-bg: var(--header-bg-light);
                 --header-text: var(--header-text-light);
-                --header-text-alt: var(--header-bg-light);
+                --accent-color: var(--accent-color-light);
+                --second-accent-color: var(--second-accent-color-light);
             }
 
             [data-theme="dark"] {
@@ -32,7 +37,8 @@
                 --text-color: var(--text-color-dark);
                 --header-bg: var(--header-bg-dark);
                 --header-text: var(--header-text-dark);
-                --header-text-alt: var(--header-text-dark-alt);
+                --accent-color: var(--accent-color-dark);
+                --second-accent-color: var(--second-accent-color-dark);
             }
 
             body {
@@ -84,7 +90,7 @@
                 border-bottom: 2px solid var(--header-bg);
                 padding-bottom: 0.3rem;
                 margin-bottom: 1rem;
-                color: var(--header-text-alt);
+                color: var(--accent-color);
             }
 
             ul {
@@ -162,10 +168,8 @@
         <header>
             <h1>Simon Lalonde</h1>
             <p>
-                <i class="fa-brands fa-github">&nbsp;</i
-                ><a href="https://github.com/simlal" target="_blank">github.com/simlal</a> |
-                <i class="fab fa-linkedin icon"></i
-                ><a href="https://www.linkedin.com/in/simon-lalonde/" target="_blank">linkedin.com/in/simon-lalonde</a>
+                <i class="fa-brands fa-github">&nbsp;</i><a href="https://github.com/simlal" target="_blank">github.com/simlal</a> |
+                <i class="fab fa-linkedin icon"></i><a href="https://www.linkedin.com/in/simon-lalonde/" target="_blank">linkedin.com/in/simon-lalonde</a>
             </p>
             <p>
                 <i class="fas fa-envelope icon"></i>Email:
@@ -176,6 +180,11 @@
         <button class="go-back" onclick="goBack()">Back <i class="fa-solid fa-circle-chevron-left"></i></button>
         <button class="theme-toggle" onclick="toggleTheme()">Dark mode <i class="fas fa-moon"></i></button>
         <div class="container">
+            <section>
+                <p style="text-align: center; color: var(--second-accent-color);">
+                    <strong>Software developer apprentice interested in Cloud-Native tech and everything Linux-related</strong>
+                </p>
+            </section>
             <section>
                 <h2>Technical Skills <i class="fas fa-laptop-code icon"></i></h2>
                 <ul>
@@ -220,10 +229,14 @@
                             <li>Explored Industry 4.0 tools to optimize production processes</li>
                         </ul>
                     </li>
-                    <li><strong>Teaching Assistant</strong> - Université de Sherbrooke (2023)</li>
-                        <ul>
-                            <li>TA for intro to programming with Python (IFT-211)</li>
-                        </ul>
+                    <li><strong>Teaching Assistant (IFT-211 - Intro to Python)</strong> - Université de Sherbrooke (2023)</li>
+                    <li><strong>Brewer</strong> - Les 3 brasseurs St-Denis (2021 - 2022)</li>
+                    <li>
+                        <strong>Lab Tech</strong> - Microbrasseries Glutenberg et Oshlag (2020 - 2021)
+                    </li>
+                    <li>
+                        <strong>Research Assistant</strong> - Montreal Heart Institute (2016 - 2020)
+                    </li>
                 </ul>
             </section>
             <section>
@@ -251,23 +264,21 @@
                 </table>
             </section>
             <section>
-                <h2>Relevent Publications <i class="fas fa-book-open icon"></i></h2>
+                <h2>Latest Publications <i class="fas fa-book-open icon"></i></h2>
                 <ul>
                     <li>
-                        Fournier C, <strong>Lalonde S</strong> et al.
-                        <strong
-                            >"Py-madaclim: An open-source Python API for geoclimatic data analysis of
-                            Madagascar."</strong
-                        >
-                        JOSS. (Writing in Progress).
+                        Fournier C, <strong>Lalonde S</strong> et al. (In Progress)
+                        <i>Py-madaclim: An open-source Python API for geoclimatic data analysis of
+                            Madagascar.</i>
+                        JOSS.
                     </li>
                     <li>
-                        Wünnemann F, <strong>Lalonde S</strong> et al.
-                        <strong
-                            >"Multimodal CRISPR perturbations of GWAS loci associated with coronary artery
-                            disease."</strong
-                        >
-                        PLoS Genet. 2023.
+                        Wünnemann F, Tadjo TF, Beaudoin M, <strong>Lalonde S</strong> et al. (2023)
+                        <i>Multimodal CRISPR perturbations of GWAS loci associated with coronary artery disease.</i>
+                        PLoS Genet. <a href="https://doi.org/10.1371/journal.pgen.1010680">10.1371/journal.pgen.1010680 </a>
+                    </li>
+                    <li>
+                        Lalonde, S., et al. (2019). <i>Integrative analysis of vascular endothelial cell genomic features identifies AIDA as a coronary artery disease candidate gene</i>. Genome Biology. <a href="https://doi.org/10.1186/s13059-019-1749-5">10.1186/s13059-019-1749-5</a>
                     </li>
                 </ul>
             </section>

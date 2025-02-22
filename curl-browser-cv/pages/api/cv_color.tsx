@@ -59,8 +59,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 \x1b[1;35m|                    Title                     |     Journal    |  Year  |\x1b[0m
 |----------------------------------------------|----------------|--------|
 | \x1b[1;32mPy-madaclim: An open-source Python API\x1b[0m       | \x1b[1;34mJOSS (in prog)\x1b[0m | \x1b[1;34m2024\x1b[0m   |
-| \x1b[1;32mMultimodal CRISPR perturbations of GWAS loci\x1b[0m | \x1b[1;34mPLoS Genet.\x1b[0m    | \x1b[1;34m2023\x1b[0m   |
-| \x1b[1;32mIntegrative analysis of genomic features\x1b[0m     | \x1b[1;34mGenome Biol.\x1b[0m   | \x1b[1;34m2019\x1b[0m   |
+| \x1b[1;32mCRISPR perturbations of CAD GWAS loci\x1b[0m        | \x1b[1;34mPLoS Genet.\x1b[0m    | \x1b[1;34m2023\x1b[0m   |
+| \x1b[1;32mIdentification of AIDA as CAD candidate gene \x1b[0m| \x1b[1;34mGenome Biol.\x1b[0m   | \x1b[1;34m2019\x1b[0m   |
 \x1b[1;34m--------------------------------------------------------------------------
 
 \x1b[1;34m--------------------------------------------------------------------------

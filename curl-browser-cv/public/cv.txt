@@ -55,8 +55,8 @@ Bachelor's in Biochemistry
 |                    Title                     |     Journal    |  Year  |
 |----------------------------------------------|----------------|--------|
 | Py-madaclim: An open-source Python API       | JOSS (in prog) | 2024   |
-| Multimodal CRISPR perturbations of GWAS loci | PLoS Genet.    | 2023   |
-| Integrative analysis of genomic features     | Genome Biol.   | 2019   |
+| CRISPR perturbations of CAD GWAS loci        | PLoS Genet.    | 2023   |
+| Identification of AIDA as CAD candidate gene | Genome Biol.   | 2019   |
 --------------------------------------------------------------------------
 
 --------------------------------------------------------------------------
