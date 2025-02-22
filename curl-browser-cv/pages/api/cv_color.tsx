@@ -1,7 +1,7 @@
 import { NextApiRequest, NextApiResponse } from "next";
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  const cv = `
+    const cv = `
 \x1b[1;34m==========================================================================
                               \x1b[1;33mSimon Lalonde\x1b[0m
 \x1b[1;34m==========================================================================\x1b[0m
@@ -14,7 +14,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
                              \x1b[1;33mTechnical Skills\x1b[0m
 \x1b[1;34m--------------------------------------------------------------------------
 \x1b[0m\x1b[1;32mCloud & DevOps:\x1b[0m Linux, Docker, AWS, GitHub Actions
-\x1b[1;32mProgramming:\x1b[0m Python, Bash, C++, Rust
+\x1b[1;32mProgramming:\x1b[0m Python, Bash, Rust
 \x1b[1;32mApplications:\x1b[0m AI & Data (matplotlib, sk-learn), Backend (NodeJS, SQL)
 
 \x1b[1;34m--------------------------------------------------------------------------
@@ -36,7 +36,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 |-------------------------|--------------------------|-------------------| \x1b[0m
 | - \x1b[1;32mDeveloped and deployed microservices with AWS Lambda                \x1b[0m |
 | - \x1b[1;32mCreated CI/CD pipelines for serverless components                    \x1b[0m|
-| - \x1b[1;32mContributed to Express API development and testing                   \x1b[0m| 
+| - \x1b[1;32mContributed to NodeJS API development and testing                    \x1b[0m| 
 |-------------------------|--------------------------|-------------------|
 | \x1b[1;34mQuality Control Manager\x1b[0m | \x1b[1;34mMicrobrasserie Siboire\x1b[0m   | \x1b[1;34m2022 - 2024   \x1b[0m    |
 |-------------------------|--------------------------|-------------------|
@@ -73,5 +73,5 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 \x1b[1;34m==========================================================================
 `;
 
-  res.send(cv);
+    res.send(cv);
 }

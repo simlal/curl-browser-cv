@@ -10,7 +10,7 @@ Location: Sherbrooke, QC
                              Technical Skills
 --------------------------------------------------------------------------
 Cloud & DevOps: Linux, Docker, AWS, GitHub Actions  
-Programming: Python, Bash, C++, Rust  
+Programming: Python, Bash, Rust  
 Applications: AI & Data (matplotlib, sk-learn), Backend (NodeJS, SQL)  
 
 --------------------------------------------------------------------------
@@ -32,7 +32,7 @@ Bachelor's in Biochemistry
 |-------------------------|--------------------------|-------------------|
 | - Developed and deployed microservices with AWS Lambda                 |
 | - Created CI/CD pipelines for serverless components                    |
-| - Contributed to Express API development and testing                   | 
+| - Contributed to NodeJS API development and testing                    | 
 |-------------------------|--------------------------|-------------------|
 | Quality Control Manager | Microbrasserie Siboire   | 2022 - 2024       |
 |-------------------------|--------------------------|-------------------|
