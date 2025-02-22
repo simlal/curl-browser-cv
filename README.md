@@ -13,6 +13,9 @@ or directly in your terminal:
 ```bash
 # Use this command if your terminal does not support color
 curl https://simlal-curl-cv.vercel.app/
+```
+
+```bash
 # If you prefer wget instead
 wget -qO - https://simlal-curl-cv.vercel.app/
 ```
@@ -22,7 +25,9 @@ wget -qO - https://simlal-curl-cv.vercel.app/
 ```bash
 # Use this command if your terminal supports color
 curl -G -d 'colorTerm=true' https://simlal-curl-cv.vercel.app/
+```
+
+```bash
 # Again if you prefer wget instead
 wget -qO - "https://simlal-curl-cv.vercel.app//?colorTerm=true"
 ```
-
