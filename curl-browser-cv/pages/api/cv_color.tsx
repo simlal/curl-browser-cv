@@ -1,7 +1,7 @@
 import { NextApiRequest, NextApiResponse } from "next";
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-    const cv = `
+  const cv = `
 \x1b[1;34m==========================================================================
                               \x1b[1;33mSimon Lalonde\x1b[0m
 \x1b[1;34m==========================================================================\x1b[0m
@@ -13,9 +13,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 \x1b[1;34m--------------------------------------------------------------------------
                              \x1b[1;33mTechnical Skills\x1b[0m
 \x1b[1;34m--------------------------------------------------------------------------
+\x1b[1;32mProgramming:\x1b[0m Python, Bash, Rust, (C/C++ Basics)
 \x1b[0m\x1b[1;32mCloud & DevOps:\x1b[0m Linux, Docker, AWS, GitHub Actions
-\x1b[1;32mProgramming:\x1b[0m Python, Bash, Rust
-\x1b[1;32mApplications:\x1b[0m AI & Data (matplotlib, sk-learn), Backend (NodeJS, SQL)
+\x1b[1;32mIoT:\x1b[0m MCU Basics (RPI Pico/ESP32), Backend (NodeJS, SQL, sk-learn)
 
 \x1b[1;34m--------------------------------------------------------------------------
                                 \x1b[1;33mEducation\x1b[0m
@@ -73,5 +73,5 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 \x1b[1;34m==========================================================================
 `;
 
-    res.send(cv);
+  res.send(cv);
 }

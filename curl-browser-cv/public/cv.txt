@@ -9,9 +9,9 @@ Location: Sherbrooke, QC
 --------------------------------------------------------------------------
                              Technical Skills
 --------------------------------------------------------------------------
+Programming: Python, Bash, Rust, (C/C++ Basics)  
 Cloud & DevOps: Linux, Docker, AWS, GitHub Actions  
-Programming: Python, Bash, Rust  
-Applications: AI & Data (matplotlib, sk-learn), Backend (NodeJS, SQL)  
+IoT: MCU Basics (RPI Pico/ESP32), Backend (NodeJS, SQL, sk-learn)  
 
 --------------------------------------------------------------------------
                                 Education
