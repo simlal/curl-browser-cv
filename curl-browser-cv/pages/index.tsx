@@ -116,7 +116,7 @@ ${colorWgetCmd}`;
           </div>
           <div>
             <h3 className="text-lg font-bold">3. Full CV from your browser</h3>
-            <Link href="/cv.html" passHref>
+            <Link href="/cv.html">
               <Button
                 style={buttonStyle}
                 onMouseEnter={() => setIsHovered(true)}
