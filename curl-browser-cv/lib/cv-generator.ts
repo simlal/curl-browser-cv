@@ -66,6 +66,7 @@ export class CVGenerator {
       `${this.colors.cyan}${'LinkedIn'.padEnd(labelWidth)}:${this.colors.reset} ${personal.linkedin}`,
       `${this.colors.cyan}${'Email'.padEnd(labelWidth)}:${this.colors.reset} ${personal.email}`,
       `${this.colors.cyan}${'Location'.padEnd(labelWidth)}:${this.colors.reset} ${personal.location}`,
+      ''
     ].join('\n');
   }
 
@@ -79,9 +80,9 @@ export class CVGenerator {
   }
 
   private renderList(items: CVItem[]): string {
-    const labelWidth = Math.max(...items.map(i => i.label.length));
+    const labelWidth = Math.max(...items.map(i => String(i.label).length));
     return items.map(item =>
-      `${this.colors.green}${item.label.padEnd(labelWidth)}:${this.colors.reset} ${item.value}`
+      `${this.colors.green}${String(item.label).padEnd(labelWidth)}:${this.colors.reset} ${item.value}`
     ).join('\n');
   }
 

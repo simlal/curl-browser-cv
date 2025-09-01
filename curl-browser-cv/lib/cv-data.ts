@@ -35,8 +35,7 @@ export const cvData: CVData = {
       items: [
         { label: "Programming", value: "Python, Bash, Rust, (C/C++ Basics)" },
         { label: "Cloud & DevOps", value: "Linux, Docker, AWS, GitHub Actions" },
-        { label: "Backend", value: "NodeJS, SQL, sk-learn" },
-        { label: "IoT", value: "MCU Basics (RPI Pico/ESP32), Embassy (Rust framework)" }
+        { label: "IoT", value: "RPI Pico, ESP32, Embassy (Rust)" },
       ]
     },
     {
