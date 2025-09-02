@@ -178,7 +178,7 @@
             </p>
         </header>
         <button class="go-back" onclick="goBack()">Back <i class="fa-solid fa-circle-chevron-left"></i></button>
-        <button class="theme-toggle" onclick="toggleTheme()">Dark mode <i class="fas fa-moon"></i></button>
+        <button class="theme-toggle" onclick="toggleTheme()"><i class="fas fa-moon"></i></button>
         <div class="container">
             <section>
                 <p style="text-align: center; color: var(--second-accent-color);">
@@ -192,7 +192,7 @@
               </h2>
               <ul class="skills-list">
                 <li><i class="fas fa-laptop-code icon"></i><strong>Programming:</strong> Python, Bash, Rust, (C/C++ basics)</li>
-                <li><i class="fas fa-server icon"></i><strong>Cloud & Backend:</strong> AWS, Docker, GitHub Actions, NodeJS, SQL, scikit-learn</li>
+                <li><i class="fas fa-server icon"></i><strong>Cloud & Backend:</strong> Linux, AWS, Docker, GH Actions, NodeJS, SQL, scikit-learn</li>
                 <li><i class="fas fa-microchip icon"></i><strong>IoT:</strong> RPI Pico, ESP32, Embassy (Rust)</li>
               </ul>
             </section>
@@ -200,9 +200,9 @@
                 <h2>Education <i class="fas fa-graduation-cap icon"></i></h2>
                 <ul>
                     <li>
-                        <strong>Master’s in Computer Science</strong>, Université de Sherbrooke (2022 - Summer 2025)
+                        <strong>Master’s in Computer Science (Course-based pathway)</strong>, Université de Sherbrooke (2022 - Summer 2025)
                         <ul>
-                            <li>Research in bioinformatics (Tahiri Lab, 2022)</li>
+                          <li>Two-semester research stint in bioinformatics, Tahiri Lab (2022)</li>
                         </ul>
                     </li>
                     <li>
@@ -303,8 +303,8 @@
                 body.setAttribute("data-theme", newTheme);
                 document.querySelector(".theme-toggle").innerHTML =
                     newTheme === "dark"
-                        ? 'Light mode <i class="fas fa-sun"></i>'
-                        : 'Dark mode <i class="fas fa-moon"></i>';
+                        ? '<i class="fas fa-sun"></i>'
+                        : '<i class="fas fa-moon"></i>';
             }
             function goBack() {
                 window.history.back();
