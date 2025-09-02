@@ -33,9 +33,9 @@ export const cvData: CVData = {
       title: "Technical Skills",
       type: "list",
       items: [
-        { label: "Programming", value: "Python, Bash, Rust, (C/C++ Basics)" },
-        { label: "Cloud & DevOps", value: "Linux, Docker, AWS, GitHub Actions" },
-        { label: "IoT", value: "RPI Pico, ESP32, Embassy (Rust)" },
+        { label: "Programming", value: "Python, Bash, Rust, (C/C++ basics)" },
+        { label: "Cloud & Backend", value: "AWS, Docker, GH Actions, NodeJS, SQL, scikit-learn, Linux" },
+        { label: "IoT", value: "RPI Pico, ESP32, Embassy (Rust)" }
       ]
     },
     {
@@ -56,7 +56,7 @@ export const cvData: CVData = {
           Company: "Axient Sante / PMG",
           Duration: "Summer 2025",
           details: [
-            "Create CI/CD pipelines for serverless infrastructure",
+            "Created CI/CD pipelines for serverless infrastructure",
             "Developed an internal Python toolkit for Lambda/Beanstalk apps",
             "Contributed to nginx rev proxy solution to embed external app"
           ]
