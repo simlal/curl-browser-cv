@@ -1,12 +1,11 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Page, Text, Button } from "@vercel/examples-ui";
 import { Code, CodeBlock, dracula } from 'react-code-blocks';
 import Link from 'next/link';
 
 const baseUrl = process.env.NEXT_PUBLIC_API_URL;
-console.log("baseUrl :", baseUrl);
+console.debug("baseUrl for curl/wget copy:", baseUrl);
 
-// You can use this for API calls, etc.
 const CopyButton = ({ text }: { text: string }) => {
   const [copied, setCopied] = useState(false);
 
@@ -19,9 +18,20 @@ const CopyButton = ({ text }: { text: string }) => {
   return (
     <button
       onClick={handleCopy}
-      className="absolute top-2 right-2 bg-gray-200 px-2 py-1 rounded hover:bg-gray-300 text-sm"
+      className="absolute top-2 right-2 bg-gray-100 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 px-2 py-1 rounded text-sm text-gray-800 dark:text-gray-200"
     >
       {copied ? "Copied! ✨" : "Copy 📋"}
+    </button>
+  );
+};
+
+const ThemeButton = ({ theme, toggleTheme }: { theme: "light" | "dark", toggleTheme: () => void }) => {
+  return (
+    <button
+      onClick={toggleTheme}
+      className="absolute top-2 right-2 px-3 py-2 rounded-lg text-sm font-medium transition-colors bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600 text-gray-800 dark:text-gray-200"
+    >
+      {theme === "light" ? "☀️" : "🌙"}
     </button>
   );
 };
@@ -57,78 +67,124 @@ ${colorWgetCmd}`;
     transition: 'background-color 0.3s',
   };
 
-  return (
-    <Page>
-      <section className="flex flex-col gap-4">
-        <Text variant="h1">Simon Lalonde&apos;s CV hub!</Text>
-        <Text>
-          Access my CV directly through your terminal or explore the full HTML version in your browser.
-        </Text>
-        <Text>
-          This Next.js app uses a middleware to intercept headers and redirect requests, allowing you to access the CV from the same URL using <Code text={"curl"} language="bash" showLineNumbers={false} /> or <Code text={"wget"} language="bash" showLineNumbers={false} />.
-        </Text>
-      </section>
+  // Toggle light-dark theme
 
-      <section className="mt-8">
-        <Text variant="h2">Quick Access Options</Text>
-        <div className="flex flex-col gap-8 mt-6">
-          <div>
-            <h3 className="text-lg font-bold">1. View plain-text CV</h3>
-            <div className="relative">
-              <CodeBlock
-                text={basicCurlCodeBlock}
-                language="bash"
-                theme={dracula}
-                showLineNumbers={false}
-              />
-              <CopyButton text={basicCurlCmd} />
+  const [theme, setTheme] = useState<"light" | "dark">("light");
+  const toggleTheme = () => {
+    setTheme(prev => (prev === "light" ? "dark" : "light"));
+  };
+
+  useEffect(() => {
+    document.documentElement.classList.toggle('dark', theme === 'dark');
+  }, [theme]);
+
+  return (
+    <div className="min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100">
+      <Page className="relative">
+        <ThemeButton theme={theme} toggleTheme={toggleTheme} />
+        {/* Intro Section */}
+        <section className="flex flex-col gap-4">
+          <Text
+            variant="h1"
+            className="text-center font-bold"
+          >
+            Simon Lalonde&apos;s CV Hub!
+          </Text>
+          <Text>
+            A lightweight Next.js application serving my CV in multiple formats from a single URL —
+            perfect for both terminal enthusiasts and browser users alike. 🚀
+          </Text>
+        </section>
+
+        {/* Technical Implementation */}
+        <section className="mt-6">
+          <Text variant="h2">🔧 Technical Implementation</Text>
+          <div className={`p-4 rounded-lg mt-2 bg-gray-50 dark:bg-gray-800`}>
+            <ul className="list-disc list-inside space-y-1 text-sm">
+              <li>
+                <strong>Smart Routing:</strong> Middleware detects whether the request comes from a
+                terminal or a browser.
+              </li>
+              <li>
+                <strong>Terminal CV Generator:</strong> CV content is managed via TypeScript types and
+                rendered in both colored and plain-text formats using the <code>CVGenerator</code> class.
+              </li>
+              <li>
+                <strong>Multiple versions:</strong> Generates plain-text, colorized terminal, and
+                HTML versions for a richer experience.
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        {/* Quick Access Options */}
+        <section className="mt-8">
+          <Text variant="h2">⚡ Quick Access Options</Text>
+          <div className="flex flex-col gap-8 mt-6">
+
+            {/* Plain-text CV */}
+            <div>
+              <h3 className="text-lg font-bold">1. View plain-text CV</h3>
+              <div className="relative">
+                <CodeBlock
+                  text={basicCurlCodeBlock}
+                  language="bash"
+                  theme={dracula}
+                  showLineNumbers={false}
+                />
+                <CopyButton text={basicCurlCmd} />
+              </div>
+              <div className="relative mt-2">
+                <CodeBlock
+                  text={basicWgetCodeBlock}
+                  language="bash"
+                  theme={dracula}
+                  showLineNumbers={false}
+                />
+                <CopyButton text={basicWgetCmd} />
+              </div>
             </div>
-            <div className="relative">
-              <CodeBlock
-                text={basicWgetCodeBlock}
-                language="bash"
-                theme={dracula}
-                showLineNumbers={false}
-              />
-              <CopyButton text={basicWgetCmd} />
+
+            {/* Color-formatted CV */}
+            <div>
+              <h3 className="text-lg font-bold">2. View color-formatted CV</h3>
+              <div className="relative">
+                <CodeBlock
+                  text={colorCurlCodeBlock}
+                  language="bash"
+                  theme={dracula}
+                  showLineNumbers={false}
+                />
+                <CopyButton text={colorCurlCmd} />
+              </div>
+              <div className="relative mt-2">
+                <CodeBlock
+                  text={colorWgetCodeBlock}
+                  language="bash"
+                  theme={dracula}
+                  showLineNumbers={false}
+                />
+                <CopyButton text={colorWgetCmd} />
+              </div>
+            </div>
+
+            {/* Full CV in Browser */}
+            <div>
+              <h3 className="text-lg font-bold">3. Full CV from your browser</h3>
+              <Link href="/cv.html">
+                <Button
+                  style={buttonStyle}
+                  onMouseEnter={() => setIsHovered(true)}
+                  onMouseLeave={() => setIsHovered(false)}
+                >
+                  View Full CV
+                </Button>
+              </Link>
             </div>
           </div>
-          <div>
-            <h3 className="text-lg font-bold">2. View color-formatted CV</h3>
-            <div className="relative">
-              <CodeBlock
-                text={colorCurlCodeBlock}
-                language="bash"
-                theme={dracula}
-                showLineNumbers={false}
-              />
-              <CopyButton text={colorCurlCmd} />
-            </div>
-            <div className="relative">
-              <CodeBlock
-                text={colorWgetCodeBlock}
-                language="bash"
-                theme={dracula}
-                showLineNumbers={false}
-              />
-              <CopyButton text={colorWgetCmd} />
-            </div>
-          </div>
-          <div>
-            <h3 className="text-lg font-bold">3. Full CV from your browser</h3>
-            <Link href="/cv.html">
-              <Button
-                style={buttonStyle}
-                onMouseEnter={() => setIsHovered(true)}
-                onMouseLeave={() => setIsHovered(false)}
-              >
-                View Full CV
-              </Button>
-            </Link>
-          </div>
-        </div>
-      </section>
-    </Page>
+        </section>
+      </Page >
+    </div >
   );
 }
 
