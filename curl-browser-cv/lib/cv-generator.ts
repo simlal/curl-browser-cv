@@ -60,13 +60,13 @@ export class CVGenerator {
     return [
       this.line(),
       this.center(personal.name, this.colors.yellow),
+      this.center(personal.title, this.colors.cyan),
       this.line(),
       '',
       `${this.colors.cyan}${'GitHub'.padEnd(labelWidth)}:${this.colors.reset} ${personal.github}`,
       `${this.colors.cyan}${'LinkedIn'.padEnd(labelWidth)}:${this.colors.reset} ${personal.linkedin}`,
       `${this.colors.cyan}${'Email'.padEnd(labelWidth)}:${this.colors.reset} ${personal.email}`,
       `${this.colors.cyan}${'Location'.padEnd(labelWidth)}:${this.colors.reset} ${personal.location}`,
-      ''
     ].join('\n');
   }
 
@@ -87,10 +87,18 @@ export class CVGenerator {
   }
 
   private renderEducation(items: CVItem[]): string {
-    return items.map(item => [
-      `${this.colors.green}${item.degree}${this.colors.reset}`,
-      `    ${this.colors.blue}${item.institution}${this.colors.reset} (${item.period})`
-    ].join('\n')).join('\n\n');
+    return items.map(item => {
+      let result = [
+        `${this.colors.green}${item.degree}${this.colors.reset}`,
+        `    ${this.colors.blue}${item.institution}${this.colors.reset} (${item.period})`
+      ];
+
+      if (item.details && Array.isArray(item.details)) {
+        result.push(...item.details.map(detail => `        • ${detail}`));
+      }
+
+      return result.join('\n');
+    }).join('\n');
   }
 
   private calculateColumnWidths(items: CVItem[]): { [key: string]: number } {

@@ -2,6 +2,7 @@
 export interface CVData {
   personal: {
     name: string;
+    title: string;
     github: string;
     linkedin: string;
     email: string;
@@ -23,6 +24,7 @@ export interface CVItem {
 export const cvData: CVData = {
   personal: {
     name: "Simon Lalonde",
+    title: "Software Developer | Cloud & Backend",
     github: "https://github.com/simlal",
     linkedin: "https://www.linkedin.com/in/simon-lalonde/",
     email: "simlalonde@hotmail.com",
@@ -30,73 +32,66 @@ export const cvData: CVData = {
   },
   sections: [
     {
-      title: "Technical Skills",
-      type: "list",
+      title: "Recent Professional Experience",
+      type: "table",
       items: [
-        { label: "Programming", value: "Python, Bash, Rust" },
-        { label: "Cloud & Backend", value: "AWS, Docker, GH Actions, NodeJS, SQL, scikit-learn, Linux" },
-        { label: "IoT", value: "RPI Pico/ESP32, MQTT, Embassy (Rust)" }
+        {
+          Position: "DevOps Intern/Backend Dev",
+          Company: "Axient/Pharmacie Martin Gilbert",
+          Duration: "2024-2025",
+          details: [
+            "Built CI/CD pipelines for AWS serverless apps",
+            "Developed an internal Python toolkit for Lambda/Beanstalk applications",
+            "Integrated analytics dashboards via nginx reverse proxy"
+          ]
+        },
+        {
+          Position: "Quality Control Manager",
+          Company: "Microbrasserie Siboire",
+          Duration: "2022 – 2024",
+          details: [
+            "Implemented a quality control program for all steps of beer production",
+            "Explored Industry 4.0 tools to optimize production processes"
+          ]
+        },
+        {
+          Position: "Research Assistant",
+          Company: "Montreal Heart Institute",
+          Duration: "2016-2019",
+          details: [
+            "Developed Linux‑based data pipelines for genomic analysis"
+          ]
+        }
       ]
     },
     {
       title: "Education",
       type: "education",
       items: [
-        { degree: "Master's in Computer Science", institution: "Université de Sherbrooke", period: "2022 - Summer 2025" },
-        { degree: "Master's in Biology", institution: "Université du Québec à Montréal", period: "2014 - 2016" },
-        { degree: "Bachelor's in Biochemistry", institution: "Université du Québec à Montréal", period: "2010 - 2013" }
-      ]
-    },
-    {
-      title: "Recent Professional Experience",
-      type: "table",
-      items: [
         {
-          Position: "DevOps internship",
-          Company: "Axient (Pharmacie Martin Gilbert)",
-          Duration: "Summer 2025",
-          details: [
-            "Created CI/CD pipelines for serverless infrastructure",
-            "Developed an internal Python toolkit for Lambda/Beanstalk apps",
-            "Contributed to nginx rev proxy solution to embed external app"
-          ]
+          degree: "Master's in Computer Science",
+          institution: "Université de Sherbrooke",
+          period: "2022 - Summer 2025",
         },
         {
-          Position: "Software Developer",
-          Company: "Pharmacie Martin Gilbert",
-          Duration: "2024 - Present",
-          details: [
-            "Prototyping of delivery microservice with SQLAlchemy/Lambda",
-            "Contributed to NodeJS API development and testing"
-          ]
+          degree: "Master's in Biology",
+          institution: "Université du Québec à Montréal",
+          period: "2014 - 2016"
         },
         {
-          Position: "Quality Control Manager",
-          Company: "Microbrasserie Siboire",
-          Duration: "2022 - 2024",
-          details: [
-            "Implemented a QC program for all steps of beer production",
-            "Explored Industry 4.0 tools to optimize production processes"
-          ]
+          degree: "Bachelor's in Biochemistry",
+          institution: "Université du Québec à Montréal",
+          period: "2010 - 2013"
         }
       ]
     },
-
     {
-      title: "Certifications",
+      title: "Personal Projects",
       type: "list",
       items: [
-        { label: "CS50X", value: "HarvardX (2023)" },
-        { label: "Python for Everybody", value: "University of Michigan (2022)" }
-      ]
-    },
-    {
-      title: "Latest Publications",
-      type: "list",
-      items: [
-        { label: "Py-madaclim: An open-source Python API", value: "In preparation (2025)" },
-        { label: "CRISPR perturbations of CAD GWAS loci", value: "PLoS Genet. (2023)" },
-        { label: "Identification of AIDA as CAD candidate gene", value: "Genome Biol. (2019)" }
+        { label: "Pico Button Wars", value: "Multiplayer reaction game on RPI Pico in Rust" },
+        { label: "IoT Data Stack", value: "ESP32→MQTT→SQLite via Flask backend using Docker compose" },
+        { label: "Py Madaclim", value: "Python API for Madagascar climate db with visualizations" }
       ]
     },
     {
