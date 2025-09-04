@@ -62,7 +62,6 @@ export class CVGenerator {
       this.center(personal.name, this.colors.yellow),
       this.center(personal.title, this.colors.cyan),
       this.line(),
-      '',
       `${this.colors.cyan}${'GitHub'.padEnd(labelWidth)}:${this.colors.reset} ${personal.github}`,
       `${this.colors.cyan}${'LinkedIn'.padEnd(labelWidth)}:${this.colors.reset} ${personal.linkedin}`,
       `${this.colors.cyan}${'Email'.padEnd(labelWidth)}:${this.colors.reset} ${personal.email}`,
