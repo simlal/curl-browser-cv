@@ -33,9 +33,9 @@ export const cvData: CVData = {
       title: "Technical Skills",
       type: "list",
       items: [
-        { label: "Programming", value: "Python, Bash, Rust, (C/C++ basics)" },
+        { label: "Programming", value: "Python, Bash, Rust" },
         { label: "Cloud & Backend", value: "AWS, Docker, GH Actions, NodeJS, SQL, scikit-learn, Linux" },
-        { label: "IoT", value: "RPI Pico, ESP32, Embassy (Rust)" }
+        { label: "IoT", value: "RPI Pico/ESP32, MQTT, Embassy (Rust)" }
       ]
     },
     {
@@ -53,7 +53,7 @@ export const cvData: CVData = {
       items: [
         {
           Position: "DevOps internship",
-          Company: "Axient Sante / PMG",
+          Company: "Axient (Pharmacie Martin Gilbert)",
           Duration: "Summer 2025",
           details: [
             "Created CI/CD pipelines for serverless infrastructure",
