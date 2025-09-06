@@ -37,7 +37,7 @@ export const cvData: CVData = {
       items: [
         {
           Position: "DevOps Intern/Backend Dev",
-          Company: "Axient/Pharmacie Martin Gilbert",
+          Company: "AEDDIX/Pharmacie Martin Gilbert",
           Duration: "2024-2025",
           details: [
             "Built CI/CD pipelines for AWS serverless apps",
