@@ -51,7 +51,6 @@ export const cvData: CVData = {
           Duration: "2022 – 2024",
           details: [
             "Implemented a quality control program for all steps of beer production",
-            "Explored Industry 4.0 tools to optimize production processes"
           ]
         },
         {
