@@ -88,9 +88,9 @@ export const cvData: CVData = {
       title: "Personal Projects",
       type: "list",
       items: [
+        { label: "AWS Lambda Python Template", value: "Template for serverless applications with CI/CD, IaC, and external API integration" },
         { label: "Pico Button Wars", value: "Multiplayer reaction game on RPI Pico in Rust" },
-        { label: "IoT Data Stack", value: "ESP32→MQTT→SQLite via Flask backend using Docker compose" },
-        { label: "Py Madaclim", value: "Python API for Madagascar climate db with visualizations" }
+        { label: "IoT Data Stack", value: "ESP32→MQTT→SQLite via Flask backend using Docker compose" }
       ]
     },
     {
