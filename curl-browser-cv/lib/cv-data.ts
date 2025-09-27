@@ -24,13 +24,22 @@ export interface CVItem {
 export const cvData: CVData = {
   personal: {
     name: "Simon Lalonde",
-    title: "Software Developer | Cloud & Backend",
+    title: "Software Developer | Embedded & DevOps Enthusiast",
     github: "https://github.com/simlal",
     linkedin: "https://www.linkedin.com/in/simon-lalonde/",
     email: "simlalonde@hotmail.com",
     location: "Sherbrooke, QC"
   },
   sections: [
+    {
+      title: "Skills",
+      type: "list",
+      items: [
+        { label: "Programming", value: "Python, Bash, Rust" },
+        { label: "DevOps & Backend", value: "AWS, Docker, GitHub Actions, IaC (CloudFormation), NodeJS, SQL" },
+        { label: "Embedded & IoT", value: "Rust (Embassy), RPI Pico/ESP32, MQTT" }
+      ]
+    },
     {
       title: "Recent Professional Experience",
       type: "table",

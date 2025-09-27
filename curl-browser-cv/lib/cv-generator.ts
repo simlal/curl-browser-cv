@@ -39,8 +39,28 @@ export class CVGenerator {
     this.colors = useColors ? COLORS : NO_COLORS;
   }
 
-  private line(char: string = '='): string {
-    return this.colors.blue + char.repeat(this.width) + this.colors.reset;
+  private line(char: string = '=', length?: number): string {
+    const width = length || this.width;
+    return this.colors.blue + char.repeat(width) + this.colors.reset;
+  }
+
+  private wrapText(text: string, maxWidth: number): string[] {
+    const words = text.split(' ');
+    const lines: string[] = [];
+    let current = '';
+
+    for (const word of words) {
+      if ((current + ' ' + word).trim().length > maxWidth) {
+        lines.push(current.trim());
+        current = word;
+      } else {
+        current += ' ' + word;
+      }
+    }
+    if (current.trim().length > 0) {
+      lines.push(current.trim());
+    }
+    return lines;
   }
 
   private center(text: string, color: string = ''): string {
@@ -80,9 +100,17 @@ export class CVGenerator {
 
   private renderList(items: CVItem[]): string {
     const labelWidth = Math.max(...items.map(i => String(i.label).length));
-    return items.map(item =>
-      `${this.colors.green}${String(item.label).padEnd(labelWidth)}:${this.colors.reset} ${item.value}`
-    ).join('\n');
+    return items.map(item => {
+      // normalize value into a string
+      const rawValue = Array.isArray(item.value) ? item.value.join(', ') : String(item.value);
+      const wrapped = this.wrapText(rawValue, this.width - labelWidth - 4);
+
+      return wrapped.map((line, idx) =>
+        idx === 0
+          ? `${this.colors.green}${String(item.label).padEnd(labelWidth)}:${this.colors.reset} ${line}`
+          : ' '.repeat(labelWidth + 2) + line
+      ).join('\n');
+    }).join('\n');
   }
 
   private renderEducation(items: CVItem[]): string {
