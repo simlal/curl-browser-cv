@@ -24,7 +24,7 @@ export interface CVItem {
 export const cvData: CVData = {
   personal: {
     name: "Simon Lalonde",
-    title: "Software Developer | Embedded & DevOps Enthusiast",
+    title: "Software Developer | Linux Enthusiast",
     github: "https://github.com/simlal",
     linkedin: "https://www.linkedin.com/in/simon-lalonde/",
     email: "simlalonde@hotmail.com",
