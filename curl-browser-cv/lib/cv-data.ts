@@ -36,8 +36,8 @@ export const cvData: CVData = {
       type: "list",
       items: [
         { label: "Programming", value: "Python, Bash, Rust" },
-        { label: "DevOps & Backend", value: "AWS, Docker, GitHub Actions, IaC (CloudFormation), NodeJS, SQL" },
-        { label: "Embedded & IoT", value: "Rust (Embassy), RPI Pico/ESP32, MQTT" }
+        { label: "Cloud & DevOps", value: "AWS, Docker, GitHub Actions, Self-Hosting (VPS)" },
+        { label: "Backend", value: "MySQL, NodeJS/Express, MQTT" }
       ]
     },
     {
