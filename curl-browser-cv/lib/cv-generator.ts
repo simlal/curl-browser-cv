@@ -107,8 +107,8 @@ export class CVGenerator {
 
       return wrapped.map((line, idx) =>
         idx === 0
-          ? `${this.colors.green}${String(item.label).padEnd(labelWidth)}:${this.colors.reset} ${line}`
-          : ' '.repeat(labelWidth + 2) + line
+          ? `${this.colors.green}${String(item.label).padEnd(labelWidth)} :${this.colors.reset} ${line}`
+          : ' '.repeat(labelWidth + 3) + line
       ).join('\n');
     }).join('\n');
   }
