@@ -1,5 +1,6 @@
 services:
   curl-cv:
+    container_name: curl-cv
     build:
       context: .
       dockerfile: Dockerfile
