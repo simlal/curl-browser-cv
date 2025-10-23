@@ -1,0 +1,25 @@
+name: Deploy curl-browser-cv
+
+on:
+  push:
+    branches: ["main"]
+  workflow_dispatch:
+
+jobs:
+  build-deploy:
+    runs-on: [self-hosted, linux]
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          path: repo
+
+      - name: Sync app repo to VPS apps dir
+        run: |
+          rsync -a --delete \
+            --exclude '.env' \
+            repo/curl-browser-cv/ /home/simlal/apps/curl-browser-cv/
+
+      - name: Deploy curl-browser-cv
+        working-directory: /home/simlal/apps/curl-browser-cv
+        run: docker compose -p curl-cv up -d --build
