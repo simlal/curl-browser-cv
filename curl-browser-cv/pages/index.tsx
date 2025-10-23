@@ -91,27 +91,23 @@ ${colorWgetCmd}`;
             Simon Lalonde&apos;s CV Hub!
           </Text>
           <Text>
-            A lightweight Next.js application serving my CV in multiple formats from a single URL —
-            perfect for both terminal enthusiasts and browser users alike. 🚀
+            A simple Next app serving my CV in multiple formats from a single URL —
+            perfect for terminal nerds 🤓 and browser users alike. 🚀
           </Text>
         </section>
 
         {/* Technical Implementation */}
         <section className="mt-6">
-          <Text variant="h2">🔧 Technical Implementation</Text>
+          <Text variant="h2">🔧 Tech details</Text>
           <div className={`p-4 rounded-lg mt-2 bg-gray-50 dark:bg-gray-800`}>
             <ul className="list-disc list-inside space-y-1 text-sm">
               <li>
-                <strong>Smart Routing:</strong> Middleware detects whether the request comes from a
+                <strong>Simple Routing:</strong> Middleware detects whether the request comes from a
                 terminal or a browser.
               </li>
               <li>
-                <strong>Terminal CV Generator:</strong> CV content is managed via TypeScript types and
-                rendered in both colored and plain-text formats using the <code>CVGenerator</code> class.
-              </li>
-              <li>
-                <strong>Multiple versions:</strong> Generates plain-text, colorized terminal, and
-                HTML versions for a richer experience.
+                <strong>Terminal CV Generator:</strong> Terminal CV content
+                rendered in both colored and plain-text formats
               </li>
             </ul>
           </div>
