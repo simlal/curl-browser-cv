@@ -9,7 +9,7 @@ This allows the same endpoint to serve both a styled browser view and a terminal
 
 ## 🚀 Live Demo
 
-**Browser:** [https://simlal-curl-cv.vercel.app/](https://simlal-curl-cv.vercel.app/)
+**Browser:** [https://curl-cv.simlal.dev/](https://curl-cv.simlal.dev/)
 
 ## 📄 View in Terminal
 
@@ -17,21 +17,21 @@ This allows the same endpoint to serve both a styled browser view and a terminal
 
 ```bash
 # For terminals without color support
-curl https://simlal-curl-cv.vercel.app/
+curl https://curl-cv.simlal.dev/
 
 ```bash
 # If you prefer wget instead
-wget -qO - https://simlal-curl-cv.vercel.app/
+wget -qO - https://curl-cv.simlal.dev/
 ```
 
 ### Colored version
 
 ```bash
 # For terminals with color color
-curl -G -d 'colorTerm=true' https://simlal-curl-cv.vercel.app/
+curl -G -d 'colorTerm=true' https://curl-cv.simlal.dev/
 ```
 
 ```bash
 # Again if you prefer wget instead
-wget -qO - "https://simlal-curl-cv.vercel.app//?colorTerm=true"
+wget -qO - "https://curl-cv.simlal.dev//?colorTerm=true"
 ```

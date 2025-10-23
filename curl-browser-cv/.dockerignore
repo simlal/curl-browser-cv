@@ -1,0 +1,22 @@
+# env files
+.env.development.local
+.env.production
+
+node_modules
+.pnp
+.pnp.js
+
+# Next.js build output
+.next
+out
+
+# git
+.git
+.gitignore
+
+# Docker
+Dockerfile
+.dockerignore
+docker-compose-dev.yml
+docker-compose.yml
+

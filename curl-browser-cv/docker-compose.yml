@@ -1,0 +1,16 @@
+services:
+  curl-cv:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        NEXT_PUBLIC_API_URL: https://curl-cv.simlal.dev
+    # No ports exposed since use compose DNS through caddy_net
+    environment:
+      - NEXT_PUBLIC_API_URL=https://curl-cv.simlal.dev
+    networks:
+      - caddy_net
+
+networks:
+  caddy_net:
+    external: true
