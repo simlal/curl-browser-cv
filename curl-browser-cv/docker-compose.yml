@@ -1,6 +1,7 @@
 services:
   curl-cv:
     container_name: curl-cv
+    restart: unless-stopped
     build:
       context: .
       dockerfile: Dockerfile
