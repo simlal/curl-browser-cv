@@ -38,20 +38,20 @@ const ThemeButton = ({ theme, toggleTheme }: { theme: "light" | "dark", toggleTh
 
 function IndexPage() {
   // terminal commands and code blocks
-  const basicCurlCmd = `curl ${baseUrl} | less`;
+  const basicCurlCmd = `curl ${baseUrl} | cat`;
   const basicCurlCodeBlock = `# Use this command if your terminal does not support color
 ${basicCurlCmd}`;
 
-  const basicWgetCmd = `wget -qO - ${baseUrl} | less`;
+  const basicWgetCmd = `wget -qO - ${baseUrl} | cat`;
   const basicWgetCodeBlock = `# If you prefer wget instead
 ${basicWgetCmd}`;
 
-  const colorCurlCmd = `curl -G -d 'colorTerm=true' ${baseUrl} | less`;
+  const colorCurlCmd = `curl -G -d 'colorTerm=true' ${baseUrl} | cat`;
   const colorCurlCodeBlock = `# Use this command if your terminal supports color
 ${colorCurlCmd}`;
 
 
-  const colorWgetCmd = `wget -qO - "${baseUrl}/?colorTerm=true" | less`;
+  const colorWgetCmd = `wget -qO - "${baseUrl}/?colorTerm=true" | cat`;
   const colorWgetCodeBlock = `# Again if you prefer wget instead
 ${colorWgetCmd}`;
 
